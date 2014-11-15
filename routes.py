@@ -18,6 +18,9 @@ def dwbDonate():
 def profileUpdated():
     return render_template('profile-updated.html')
 
+@app.route('/authenticate')
+def authenticate():
+    return render_template('authenticate.html')
 
 @app.route('/oxfm')
 def oxfm():
