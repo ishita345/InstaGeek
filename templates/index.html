@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>4 Col Portfolio - Start Bootstrap Template</title>
+    <title>InstaGeek</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
@@ -71,7 +71,7 @@
         <div class="row">
             <div class="col-md-2 col-md-offset-2 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="../static/img/LinkedIn-Logo.png" alt="">
+                    <img id="image" class="img-responsive" src="../static/img/LinkedIn-Logo.png" alt="">
                 </a>
             </div>
             <div class="col-md-2 portfolio-item">
@@ -170,6 +170,13 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../static/js/bootstrap.min.js"></script>
+
+    <script>
+    $("#image").click(function() {
+        $(this).css('opacity', 0.2);
+    });
+
+    </script>
 
 </body>
 

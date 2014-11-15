@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from scrape import main
 
 app = Flask(__name__)
 
@@ -8,6 +9,10 @@ def home():
 
 @app.route('/application')
 def application():
+    print request
+    companies = request.args.get('companies')
+    print companies
+    blogs = main(companies)
     return render_template('application.html')
 
 if __name__ == '__main__':

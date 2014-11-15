@@ -16,6 +16,10 @@ body {
     margin-bottom: 25px;
 }
 
+.faded {
+    opacity: 0.6;
+}
+
 footer {
     margin: 50px 0;
 }
