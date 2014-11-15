@@ -38,15 +38,11 @@
                         InstaGeek
                     </a>
                 </li>
+                {% for company in companies %}
                 <li>
-                    <a href="#">Linkedin</a>
+                    <a href="#">{{ company }}</a>
                 </li>
-                <li>
-                    <a href="#">Facebook</a>
-                </li>
-                <li>
-                    <a href="#">Twitter</a>
-                </li>
+                {% endfor %}
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -55,31 +51,25 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
+                    {% for blog in blogs %}
                     <div class="col-md-10 col-md-offset-1 post-item">
                         <div class="col-md-1 icon">
                             <img class="img-responsive" src="../static/img/LinkedIn-Logo.png" alt="">
                         </div>
                         <div class="post-content">
                             <div class="col-md-11 title">
-                                <p>Title</p>
+                                <p>{{ blog.title }}</p>
                             </div>
                             </div>
                             <div class="col-md-8 tags">
-                                <p>Tags</p>
+                                <p>{{ blog.tags }}</p>
                             </div>
                             <div class="col-md-3 date">
-                                <p>Date</p>
+                                <p>{{ blog.date }}</p>
                         </div>
                     </div>
-                    <div class="col-md-10 col-md-offset-1 post-item">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    </div>
-                    <div class="col-md-10 col-md-offset-1 post-item">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    </div>
-                    <div class="col-md-10 col-md-offset-1 post-item">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    </div>
+                    {% endfor %}
+
                     <!--
                     <div class="col-lg-12">
                         <h1>Simple Sidebar</h1>
