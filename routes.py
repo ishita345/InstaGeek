@@ -23,5 +23,9 @@ def profileUpdated():
 def oxfm():
     return render_template('oxfam.html')
 
+@app.route('/thank-you')
+def thankyou():
+	return render_template('thank-you.html')
+
 if __name__ == '__main__':
 	app.run(debug=True)
