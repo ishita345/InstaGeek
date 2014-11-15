@@ -95,6 +95,35 @@
     background: none;
 }
 
+.post-item {
+    outline: 1px solid grey;
+    margin-bottom: 25px;
+}
+
+.post-content {
+    padding-top: 5px;
+}
+
+.icon {
+    padding: 10px 10px 10px 10px;
+    outline: 1px solid grey;
+}
+
+.title {
+    outline: 1px solid grey;
+    padding-left: 0px;
+}
+
+.date {
+    text-align: right;
+    outline: 1px solid grey;
+}
+
+.tags {
+    outline: 1px solid grey;
+    padding-left: 0px;
+}
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
