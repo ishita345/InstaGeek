@@ -71,12 +71,12 @@
         <div class="row">
             <div class="col-md-2 col-md-offset-2 portfolio-item">
                 <a href="#">
-                    <img id="image" class="img-responsive" src="../static/img/LinkedIn-Logo.png" alt="">
+                    <img class="img-responsive" src="../static/img/LinkedIn-Logo.png" alt="" data-company="linkedin">
                 </a>
             </div>
             <div class="col-md-2 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="../static/img/FB-Logo.png" alt="">
+                    <img class="img-responsive" src="../static/img/FB-Logo.png" alt="" data-company="facebook">
                 </a>
             </div>
             <div class="col-md-2 portfolio-item">
@@ -117,6 +117,10 @@
             </div>
         </div>
         <!-- /.row -->
+
+        <div class="view-blogs">
+            <button id="blog-button" type="button" class="btn btn-default" aria-label="Left Align">View Blogs</button>
+        </div>
 
         <hr>
 
@@ -172,8 +176,15 @@
     <script src="../static/js/bootstrap.min.js"></script>
 
     <script>
-    $("#image").click(function() {
+    companies = []
+    $(".img-responsive").click(function() {
+        companies.push($(this).data("company"))
         $(this).css('opacity', 0.2);
+    });
+
+    $("#blog-button").click(function () {
+        var url = "/application?companies=" + companies.join(',');
+        window.location=url
     });
 
     </script>

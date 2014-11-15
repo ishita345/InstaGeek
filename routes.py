@@ -13,10 +13,10 @@ def application():
     #companies = request.args.get('companies')
     companies = [
         {
-            'company': 'ABC'
+            'ABC'
         },
         {
-            'company': 'XYZ'
+            'XYZ'
         }
     ]
     print companies
@@ -36,4 +36,4 @@ def application():
     return render_template('application.html', companies=companies, blogs=blogs)
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run(debug=True, port=5002)
