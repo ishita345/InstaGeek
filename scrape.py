@@ -12,6 +12,8 @@ def linkedin(url,allblogs):
         blog['url'] = result["read_more_link"]
         blog['date']=result["date_date/_source"]
         blog['tags']=result["tag_link_list/_text"]
+        if not isinstance(blog['tags'], list):
+            blog['tags']=[result["tag_link_list/_text"]]
         blog['company']= "linkedin"
        # print(result["username_link/_text"])      #Name of person
        # print(result["text_1"])                   #Designation
@@ -28,6 +30,8 @@ def facebook(url,allblogs):
         blog['url'] = result["link_1"]
         blog['date']=result["text_3"]
         blog['tags'] = result["uicollapsedlistmiddot_text_list"]
+        if not isinstance(blog['tags'], list):
+            blog['tags'] = [result["uicollapsedlistmiddot_text_list"]]
         blog['company'] = "facebook"
         #print(result["text_1"])                 #Name of person
         #print(result["text_2"])                 #Designation
@@ -46,6 +50,8 @@ def twitter(url, allblogs):
         #print(result["html_1"])                 #Name of person
         tags = re.sub('/tags/', '',result["links_link/_source"])
         blog['tags'] = tags
+        if not isinstance(blog['tags'], list):
+            blog['tags'] = [tags]
         blog['company'] ="twitter"
         allblogs.append(blog)
     #return allblogs

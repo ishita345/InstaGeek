@@ -54,16 +54,19 @@
                     {% for blog in blogs %}
                     <div class="col-md-10 col-md-offset-1 post-item">
                         <div class="col-md-1 icon">
-                            <img class="img-responsive" src="../static/img/LinkedIn-Logo.png" alt="">
+                            <img class="img-responsive" src="../static/img/{{ blog.company }}-Logo.png" alt="">
                         </div>
                         <div class="post-content">
                             <div class="col-md-11 title">
                                 <a href={{ blog.url }}>{{ blog.title }}</a>
-                                <p>{{ blog.title }}</p>
                             </div>
                             </div>
                             <div class="col-md-8 tags">
-                                <p>{{ blog.tags }}</p>
+                                <ul class="list-inline">
+                                    {% for tag in blog.tags %}
+                                    <li>#{{ tag }}</li>
+                                    {% endfor %}
+                                </ul>
                             </div>
                             <div class="col-md-3 date">
                                 <p>{{ blog.date }}</p>

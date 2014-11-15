@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from scrape import main
+import json
 
 app = Flask(__name__)
 
@@ -14,6 +15,7 @@ def application():
     print companies
     companylist = companies.split(',')
     blogs = main(companies)
+#    blogs.tags = json.dumps(blogs.tags)
     return render_template('application.html', companies=companylist, blogs=blogs)
 
 if __name__ == '__main__':
