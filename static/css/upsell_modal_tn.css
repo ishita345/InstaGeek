@@ -1,0 +1,143 @@
+/*
+ * CSS code for one-time donation form monthly up-sell modal window.
+ */
+
+/* simple modal css overrides */
+#simplemodal-container {
+    border-color: #ffffff;
+    padding: 0px;
+}
+
+#simplemodal-container .simplemodal-data {
+    padding: 0px;
+}
+
+/* we need the opacity set here for IE 10 */
+#simplemodal-overlay {
+    opacity: 0.8;
+}
+/* end: simple modal css overrides */
+
+#upsell-modal-content {
+    display:none;
+}
+
+#upsell-modal-outer {
+    width: 730px;
+    height: 510px;
+    background: #ffffff;
+}
+
+#upsell-modal-inner {
+    width: 710px;
+    height: 480px;
+    margin: 5px 10px 10px 10px;
+    background-image: url(../images/lightbox_tn/background_img.jpg);
+}
+
+#upsell-modal-skip {
+    text-align: right;
+    margin-right: 10px;
+    padding-top: 5px;
+    color: #333333;
+    font-size: 14px;
+}
+
+#upsell-modal-skip-link {
+    cursor: hand;
+    cursor: pointer;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+
+#upsell-content {
+    padding-top: 100px;
+    padding-left: 25px;
+    width: 400px;
+    color: #ffffff;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    text-align: left;
+}
+
+.upsell-title {
+    font-size: 25px;
+    font-weight:bold;
+    line-height: 35px;
+}
+
+.upsell-subtitle {
+    font-size: 14px;
+    font-weight:bold;
+    line-height: 17px;
+    padding-top: 5px;
+}
+
+.upsell-copy {
+    font-size: 17px;
+    line-height: 25px;
+    padding-top: 15px;
+}
+
+.upsell-button {
+    background-repeat:no-repeat;
+    background-position: right bottom;
+    text-align:center;
+    font-size: 13px;
+    cursor: hand;
+    cursor: pointer;
+}
+
+#upsell-yes-shell {
+    width: 307px;
+    height: 41px;
+    margin-top: 45px;
+    margin-left: 0px;
+    margin-bottom: 25px;
+}
+
+#upsell-yes-button {
+    height: 41px;
+}
+
+#upsell-no-shell {
+    width: 307px;
+    height: 78px;
+    margin-left: 0px;
+}
+
+#upsell-no-button {
+    height: 41px;
+}
+
+#upsell-yes-button-inner {
+    width: 118px;
+    height: 41px;
+    float: left;
+    background-image: url(../images/lightbox_tn/orange_button_background.png);
+}
+
+#upsell-no-button-inner {
+    width: 118px;
+    height: 41px;
+    float: left;
+    background-image: url(../images/lightbox_tn/gray_button_background.png);
+}
+
+.upsell-yes-copy {
+    font-size: 19px;
+    font-weight:bold;
+}
+
+.upsell-button-copy {
+    float: left;
+    width: 150px;
+    height: 41px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 19px;
+    padding-left: 12px;
+}
+
+/* Country select modal window notice for Canada */
+.ca-notice {
+    padding: 10px 15px 10px 20px !important;
+}
