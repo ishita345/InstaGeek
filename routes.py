@@ -10,30 +10,11 @@ def home():
 @app.route('/application')
 def application():
     print request
-    #companies = request.args.get('companies')
-    companies = [
-        {
-            'ABC'
-        },
-        {
-            'XYZ'
-        }
-    ]
+    companies = request.args.get('companies')
     print companies
-    #blogs = main(companies)
-    blogs = [
-        {
-            'title': 'ABC',
-            'tags': ['abc','xyz'],
-            'date': 'yyymmdd'
-        },
-        {
-            'title': 'ABC',
-            'tags': ['abc','xyz'],
-            'date': 'yyymmdd'
-        }
-    ]
-    return render_template('application.html', companies=companies, blogs=blogs)
+    companylist = companies.split(',')
+    blogs = main(companies)
+    return render_template('application.html', companies=companylist, blogs=blogs)
 
 if __name__ == '__main__':
 	app.run(debug=True, port=5002)
