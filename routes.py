@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-	return render_template('profile.html')
+	return render_template('old-profile.html')
 
 @app.route('/dwb')
 def dwb():
@@ -13,6 +13,10 @@ def dwb():
 @app.route('/dwb-donate')
 def dwbDonate():
     return render_template('dwb-donate.html')
+
+@app.route('/updated-profile')
+def profileUpdated():
+    return render_template('profile-updated.html')
 
 
 @app.route('/oxfm')
